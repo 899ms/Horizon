@@ -67,8 +67,8 @@
 <img src="docs/assets/email.png" alt="邮件推送" />
 </td>
 <td width="50%" valign="top">
-<p align="center"><strong>微信阅读效果（节选）</strong></p>
-<img src="docs/assets/wechat-preview.jpg" alt="微信中的日报正文" />
+<p align="center"><strong>微信推送</strong></p>
+<img src="docs/assets/wechat.jpg" alt="微信中的日报头部、总览和正文" />
 </td>
 </tr>
 </table>
@@ -103,7 +103,7 @@
 
 ## 工作原理
 
-![Horizon 架构：十类信息源汇入 Profile 驱动的处理流程，再通过 Markdown、Pages、邮件和 Webhook 分发。](docs/assets/architecture.svg)
+![Horizon 架构：十类信息源汇入 Profile 驱动的处理流程，按区块启用历史与网络搜索，再通过 Markdown、Pages、邮件、微信和 Webhook 分发。](docs/assets/architecture.svg)
 
 [OmniGraffle 可编辑图源](docs/assets/architecture.graffle)
 

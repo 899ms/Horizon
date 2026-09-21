@@ -67,8 +67,8 @@
 <img src="docs/assets/email.png" alt="Email Delivery" />
 </td>
 <td width="50%" valign="top">
-<p align="center"><strong>WeChat配信（抜粋）</strong></p>
-<img src="docs/assets/wechat-preview.jpg" alt="WeChatで表示した日報の本文" />
+<p align="center"><strong>WeChat配信</strong></p>
+<img src="docs/assets/wechat.jpg" alt="WeChatで表示した日報のヘッダー、概要、本文" />
 </td>
 </tr>
 </table>
@@ -103,7 +103,7 @@
 
 ## 仕組み
 
-![Horizonの構成：10種類の情報源をプロファイル駆動の処理に集約し、Markdown・Pages・メール・Webhookで届けます。](docs/assets/architecture.svg)
+![Horizonの構成：10種類の情報源をプロファイル駆動の処理に集約し、ブロック別に履歴・Web検索を利用。Markdown・Pages・メール・WeChat・Webhookで届けます。](docs/assets/architecture.svg)
 
 [編集可能なOmniGraffleファイル](docs/assets/architecture.graffle)
 

@@ -66,8 +66,8 @@
 <img src="docs/assets/email.png" alt="Email Delivery" />
 </td>
 <td width="50%" valign="top">
-<p align="center"><strong>WeChat Delivery (Excerpt)</strong></p>
-<img src="docs/assets/wechat-preview.jpg" alt="Briefing text displayed in WeChat" />
+<p align="center"><strong>WeChat Delivery</strong></p>
+<img src="docs/assets/wechat.jpg" alt="Horizon briefing header, overview, and details in WeChat" />
 </td>
 </tr>
 </table>
@@ -102,7 +102,7 @@ Assign a profile to a source, or let AI choose. Want a different take? Adapt an 
 
 ## How It Works
 
-![Horizon architecture: ten sources feed a shared profile-driven pipeline, with Markdown, Pages, email, and webhook delivery.](docs/assets/architecture.svg)
+![Horizon architecture: ten sources feed a profile-driven pipeline with history and web search tools, delivering to Markdown, Pages, email, WeChat, and webhooks.](docs/assets/architecture.svg)
 
 [Editable OmniGraffle source](docs/assets/architecture.graffle)
 
