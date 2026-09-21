@@ -52,17 +52,23 @@
 <br>
 <table>
 <tr>
-<td width="33.33%">
+<td width="50%" valign="top">
 <p align="center"><strong>ターミナル出力</strong></p>
 <img src="docs/assets/terminal_log.png" alt="Terminal Output" />
 </td>
-<td width="33.33%">
+<td width="50%" valign="top">
 <p align="center"><strong>Feishu通知</strong></p>
 <img src="docs/assets/feishu_en.png" alt="Feishu Notification" />
 </td>
-<td width="33.33%">
+</tr>
+<tr>
+<td width="50%" valign="top">
 <p align="center"><strong>メール配信</strong></p>
 <img src="docs/assets/email.png" alt="Email Delivery" />
+</td>
+<td width="50%" valign="top">
+<p align="center"><strong>WeChat配信（抜粋）</strong></p>
+<img src="docs/assets/wechat-preview.jpg" alt="WeChatで表示した日報の本文" />
 </td>
 </tr>
 </table>
@@ -305,7 +311,7 @@ Horizonは、生成されたブリーフィングをいくつかの方法で公�
 | **GitHub Pages 日次サイト** | 生成されたMarkdownを`docs/`にコピーし、GitHub Pagesが毎日更新されるブリーフィングサイトを公開できるようにします |
 | **メール購読** | 日次ブリーフィングを購読者に送信し、SMTP/IMAPを通じて購読・購読解除リクエストを処理します |
 | **Webhook通知** | 成功または失敗の結果をFeishu/Lark、DingTalk、Slack、Discord、または任意のカスタムWebhookエンドポイントへプッシュします |
-| **WeChat通知** | 公式のiLink Bot APIを通じて日報をWeChatへプッシュします。`horizon-wechat login` でQRコードを一度スキャンするだけです |
+| **WeChat通知** | QRログイン後にボットへメッセージを送り、iLink Bot経由で日報を受信。WeChatの返信数制限が適用されます |
 
 配信の設定は[設定ガイド](docs/configuration.md)を参照してください。AIアシスタントから各段階を呼び出すには**MCPサーバー**を利用できます：[ツール一覧](src/mcp/README.md)・[クライアント設定](src/mcp/integration.md)。
 
@@ -324,7 +330,6 @@ Horizonは余暇に運営されているオープンソースプロジェクト�
 | ガイド | 説明 |
 |-------|-------------|
 | [設定](docs/configuration.md) | AIプロバイダー、情報源、処理プロファイル、フィルタリング、メール、webhook、WeChat、GitHub Pages、MCPのセットアップ |
-| [WeChat配信](docs/wechat.md) | iLink Bot APIで日報をWeChatへプッシュ：QRログイン、チャットコマンド、スタイル、返信上限 |
 | [処理プロファイル](docs/profiles.md) | プロファイルの振り分け、プロンプト、実行時フィルター設定、エンリッチブロック、ツール |
 | [スコアリング](docs/scoring.md) | Horizonがニュース項目を評価・ランク付けする方法 |
 | [スクレイパー](docs/scrapers.md) | 情報源スクレイパーの詳細と拡張に関する注記 |

@@ -222,8 +222,6 @@ class HorizonOrchestrator:
             if config.wechat and config.wechat.enabled
             else None
         )
-        # Push channels sharing the send_daily_summary / send_failure interface.
-        self.notifiers = [n for n in (self.webhook_notifier, self.wechat_notifier) if n]
         self.last_fetch_report: Optional[FetchReport] = None
 
     async def run(self, force_hours: int = None) -> None:
@@ -365,9 +363,9 @@ class HorizonOrchestrator:
                     subject = f"Horizon Summary ({lang.upper()}) - {today}"
                     self.email_manager.send_daily_summary(summary, subject, subscribers)
 
-                # Push to webhook / WeChat if configured
-                for notifier in self.notifiers:
-                    await notifier.send_daily_summary(
+                # Send webhook notification if configured
+                if self.webhook_notifier:
+                    await self.webhook_notifier.send_daily_summary(
                         summary=summary,
                         important_items=important_items,
                         all_items_count=len(all_items),
@@ -375,6 +373,8 @@ class HorizonOrchestrator:
                         lang=lang,
                         summarizer=summarizer,
                     )
+                if self.wechat_notifier:
+                    await self.wechat_notifier.send_daily_summary(summary, lang)
 
             self.console.print(
                 f"[bold green]{self.icons['success']} "
@@ -400,9 +400,14 @@ class HorizonOrchestrator:
                 f"[bold red]{self.icons['error']} Error: {e}[/bold red]"
             )
 
-            # Push failure notifications if configured
-            for notifier in self.notifiers:
-                await notifier.send_failure(
+            # Send webhook failure notification if configured
+            if self.webhook_notifier:
+                await self.webhook_notifier.send_failure(
+                    date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+                    error_message=str(e),
+                )
+            if self.wechat_notifier:
+                await self.wechat_notifier.send_failure(
                     date=datetime.now(timezone.utc).strftime("%Y-%m-%d"),
                     error_message=str(e),
                 )

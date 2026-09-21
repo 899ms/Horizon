@@ -52,17 +52,23 @@
 <br>
 <table>
 <tr>
-<td width="33.33%">
+<td width="50%" valign="top">
 <p align="center"><strong>终端输出</strong></p>
 <img src="docs/assets/terminal_log.png" alt="终端输出" />
 </td>
-<td width="33.33%">
+<td width="50%" valign="top">
 <p align="center"><strong>飞书通知</strong></p>
 <img src="docs/assets/feishu_zh.png" alt="飞书通知" />
 </td>
-<td width="33.33%">
+</tr>
+<tr>
+<td width="50%" valign="top">
 <p align="center"><strong>邮件推送</strong></p>
 <img src="docs/assets/email.png" alt="邮件推送" />
+</td>
+<td width="50%" valign="top">
+<p align="center"><strong>微信阅读效果（节选）</strong></p>
+<img src="docs/assets/wechat-preview.jpg" alt="微信中的日报正文" />
 </td>
 </tr>
 </table>
@@ -298,7 +304,7 @@ Horizon 支持通过多种方式发布和分发生成的日报：
 | **GitHub Pages 日报站点** | 将生成的 Markdown 复制到 `docs/`，通过 GitHub Pages 发布为每日更新的静态日报站点 |
 | **邮件订阅** | 通过 SMTP/IMAP 向订阅者发送日报，并自动处理订阅/退订请求 |
 | **Webhook 通知** | 在成功或失败时将结果推送到飞书、钉钉、Slack、Discord 或任意 Webhook 端点 |
-| **微信通知** | 通过微信官方 iLink Bot API 把日报直接推送到你的微信，用 `horizon-wechat login` 扫一次码即可 |
+| **微信通知** | 通过 iLink Bot 推送日报；扫码登录后向机器人发一条消息即可连接，推送受微信回复额度限制 |
 
 投递配置见[配置指南](docs/configuration.md)。希望让 AI 助手调用流水线各阶段，可接入 **MCP Server**：[工具说明](src/mcp/README.md) · [客户端接入](src/mcp/integration.md)。
 
@@ -307,7 +313,6 @@ Horizon 支持通过多种方式发布和分发生成的日报：
 | 文档 | 内容 |
 |------|------|
 | [配置指南](docs/configuration.md) | AI 模型、信息源、Profile、筛选、邮件、Webhook、微信、GitHub Pages 和 MCP 配置 |
-| [微信推送](docs/wechat_zh.md) | 通过 iLink Bot API 推送到微信：扫码登录、聊天指令、样式、回复额度 |
 | [Profile 指南](docs/profiles.md) | 内置读法、自定义评分与内容区块、路由和工具权限 |
 | [评分机制](docs/scoring.md) | Horizon 如何评估和排序新闻 |
 | [抓取器](docs/scrapers.md) | 信息源抓取器说明和扩展细节 |

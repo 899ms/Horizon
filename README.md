@@ -51,17 +51,23 @@
 <br>
 <table>
 <tr>
-<td width="33.33%">
+<td width="50%" valign="top">
 <p align="center"><strong>Terminal Output</strong></p>
 <img src="docs/assets/terminal_log.png" alt="Terminal Output" />
 </td>
-<td width="33.33%">
+<td width="50%" valign="top">
 <p align="center"><strong>Feishu Notification</strong></p>
 <img src="docs/assets/feishu_en.png" alt="Feishu Notification" />
 </td>
-<td width="33.33%">
+</tr>
+<tr>
+<td width="50%" valign="top">
 <p align="center"><strong>Email Delivery</strong></p>
 <img src="docs/assets/email.png" alt="Email Delivery" />
+</td>
+<td width="50%" valign="top">
+<p align="center"><strong>WeChat Delivery (Excerpt)</strong></p>
+<img src="docs/assets/wechat-preview.jpg" alt="Briefing text displayed in WeChat" />
 </td>
 </tr>
 </table>
@@ -309,7 +315,7 @@ Horizon can publish or deliver the generated briefing in several ways:
 | **GitHub Pages Daily Site** | Copies generated Markdown into `docs/` so GitHub Pages can publish a daily-updated briefing site |
 | **Email Subscription** | Sends the daily briefing to subscribers and handles subscribe/unsubscribe requests through SMTP/IMAP |
 | **Webhook Notification** | Pushes success or failure results to Feishu/Lark, DingTalk, Slack, Discord, or any custom webhook endpoint |
-| **WeChat Notification** | Pushes the briefing to your WeChat through the official iLink Bot API — scan a QR code once with `horizon-wechat login` |
+| **WeChat Notification** | Sends briefings through iLink Bot after QR login and a message from you; WeChat reply limits apply |
 
 For delivery setup, see the [Configuration Guide](docs/configuration.md). To run pipeline stages from an AI assistant, use the **MCP Server**: [tools](src/mcp/README.md) · [client setup](src/mcp/integration.md).
 
@@ -328,7 +334,6 @@ Horizon is an open-source project maintained in spare time. If you'd like to sup
 | Guide | Description |
 |-------|-------------|
 | [Configuration](docs/configuration.md) | AI providers, sources, profiles, filtering, email, webhook, WeChat, GitHub Pages, and MCP setup |
-| [WeChat Delivery](docs/wechat.md) | Push briefings to WeChat through the iLink Bot API: QR login, chat commands, styles, reply budget |
 | [Processing Profiles](docs/profiles.md) | Profile routing, prompts, runtime filtering preferences, enrichment blocks, and tools |
 | [Scoring](docs/scoring.md) | How Horizon evaluates and ranks news items |
 | [Scrapers](docs/scrapers.md) | Source scraper details and extension notes |
